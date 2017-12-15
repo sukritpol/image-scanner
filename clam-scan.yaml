@@ -4,12 +4,12 @@ metadata:
   generateName: imagescan
 spec:
   containers:
-  - image: docker.io/mfojtik/clamav-scan:latest
+  - image: CLAMSCAN_SOURCE_IMAGE
     imagePullPolicy: Always
     name: imagescan
     env:
     - name: TARGET_IMAGE
-      value: docker.io/mfojtik/virus-test:latest
+      value: CLAMSCAN_TARGET_IMAGE
     resources: {}
     securityContext:
       privileged: true
